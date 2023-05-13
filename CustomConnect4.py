@@ -44,12 +44,9 @@ class BoardState:
         else:
             return 1
 
-#returns number of columns
-    def getColumn(self, sub = None):
-        if (sub == None):
+    def getColumn(self):
             return self.column
 
-#returns number of rows
     def getRows(self):
         return self.row
 
