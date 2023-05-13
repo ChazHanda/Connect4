@@ -3,7 +3,7 @@
 
 ## **Current features**:
 
-1. custom height and width for the board
+1. user inputs height and width for the board
 2. handles invalid user inputs
 3. loop to replay the game with options to change or keep settings
 4. each of the two player slots can be played by AI or user input
