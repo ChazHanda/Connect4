@@ -163,6 +163,7 @@ class BoardState:
 
             
 #function returns a point value for the minimax algorithm
+#currently not used
     def scoreTheBoard (self, board, row, column, player):
         if (board.checkDraw()):
             return DRAW_VALUE
