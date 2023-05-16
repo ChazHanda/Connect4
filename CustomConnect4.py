@@ -313,14 +313,14 @@ def inputMove(board, pLabel):
     invalidInput = True
     while (invalidInput):
         try:
-            board.printBoard()
             userInput = input("Player " + pLabel + " select move (type 1-" + str(board.getColumn()) + "):")
             moveRowPos = int(userInput) - 1
             if (board.checkValidMove(moveRowPos)):
                 invalidInput = False
-                return userInput
+                return moveRowPos
         except:
             invalidInput()
+            board.printBoard()
 
 def inputPlayAgain():
     invalidInput = True
@@ -367,13 +367,16 @@ while (keepPlaying == True):
     draw = False    
     play = True    
     while (play == True):
+        print("\n\n")
+        board.printBoard()
+        
         if (playerAI[player - 1] == True):
             pos = board.aiPlacePiece(board, player)
             moveRowPos = pos[0]
             columnPos = pos[1]
                 
         else:
-            moveRowPos = inputMove(playerLabel(player))
+            moveRowPos = inputMove(board, playerLabel(player))
             columnPos = board.placePiece(player, moveRowPos)              
 
         if (board.checkWin(player, columnPos, moveRowPos)):
@@ -384,11 +387,10 @@ while (keepPlaying == True):
             play = False
             draw = True
             
-        print("\n\n")
-        board.printBoard()
         player = playerSwap(player)
 
-    
+    print("\n\n")
+    board.printBoard()
     if(draw == True):
         print("Draw!")
     else:
