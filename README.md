@@ -9,10 +9,11 @@
 4. each of the two player slots can be played by AI or user input
 5. AI selection uses the minimax algorithm to pick a move
 
+<img src="6by6AIvsAI.gif" width=250><br> 
 
 ## **Possible future plans**:
 
 1. win condition algorithm optimization
 2. additional scoring for the minimax algorithm
-3. option for 3 players
+3. graphic user interface
 
